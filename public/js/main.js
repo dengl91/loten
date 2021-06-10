@@ -9,6 +9,10 @@
             $(this).toggleClass('active');
         });
 
+        $('[data-active]').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
         $('[data-control]').on('click', function() {
             let target = $(this).data('control');
             $('.' + target).toggleClass('active');
@@ -34,6 +38,13 @@
         $('.megamenu__mobile').on('click', function() {
             let index = $(this).index();
             $('.megamenu__content').eq(index).addClass('active').siblings().removeClass('active');
+        });
+
+        $('.tab__item').on('click', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+            let index = $(this).index();
+            $('.tab__content').removeClass('active');
+            $('.tab__content').eq(index).addClass('active');
         });
 
         // Lazy and counters
@@ -88,6 +99,26 @@
                 multirange(document.querySelector('input[name=height]'));
                 $('.filter__wrapper').find('.filter-range').trigger('input');
             }
+        });
+
+        // modal
+
+        $('.modal').mousedown( function(e) {
+            if (e.target !== this) return;
+            $(this).removeClass('active');
+        });
+
+        $('.modal__close').on('click', function() {
+            $(this).closest('.modal').removeClass('active');
+        });
+
+        // slider
+        
+        $('.product__gallery').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
         });
 
         function countUp(target) {

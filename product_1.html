@@ -7,6 +7,7 @@
     <title>Loten</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="public/css/slick.css">
     <link rel="stylesheet" href="public/css/multirange.css">
     <link rel="stylesheet" href="public/css/common.css">
     
@@ -15,7 +16,9 @@
 
     <header class="header">
         <div class="container">
-            <img src="public/img/logo.svg" class="header__logo" alt="Loten">
+            <a href="/">
+                <img src="public/img/logo.svg" class="header__logo" alt="Loten">
+            </a>
             <div class="menu-btn" data-toggle data-control="megamenu">
                 <div class="menu-btn__item"></div>
                 <div class="menu-btn__item"></div>
@@ -88,91 +91,145 @@
             &nbsp;/&nbsp;
             <a href="/catalog/" class="bc__item">Каталог</a>
             &nbsp;/&nbsp;
-            Радиаторы
+            <a href="" class="bc__item">Дизайнерские радиаторы</a>
+            &nbsp;/&nbsp;
+            <a href="" class="bc__item">Вертикальные</a>
+            &nbsp;/&nbsp;
+            Радиатор Loten “Grey Z”
         </div>
     </div>
 
     <section class="content">
         <div class="container">
-            <h1>Дизайнерские радиаторы</h1>
-            <div class="filter__content">
-                <div class="filter__item">
-                    <div class="filter__title">Тип подключения</div>
-                    <div class="filter__items">
-                        <label for="angle">
-                            <input type="checkbox" id="angle">Угловой
-                        </label>
-                        <label for="straight">
-                            <input type="checkbox" id="straight">Прямой
-                        </label>
-                        <label for="axial">
-                            <input type="checkbox" id="axial">Осевой
-                        </label>
-                        <label for="triaxial">
-                            <input type="checkbox" id="triaxial">Трехосевой
-                        </label>
+            <div class="row">
+                <div class="col-50">
+                    <div class="product__gallery">
+                        <img src="public/img/prod__1.jpg" alt="Радиатор Loten “Grey Z”">
+                        <img src="public/img/prod__1.jpg" alt="Радиатор Loten “Grey Z”">
+                        <img src="public/img/prod__1.jpg" alt="Радиатор Loten “Grey Z”">
+                        <img src="public/img/prod__1.jpg" alt="Радиатор Loten “Grey Z”">
                     </div>
                 </div>
-                <div class="filter__item">
-                    <div class="filter__title">Цвет</div>
-                    <div class="filter__items colors">
-                        <label for="white">
-                            <input type="checkbox" id="white">Белый
-                        </label>
-                        <label for="gray">
-                            <input type="checkbox" id="gray">Серый матовый
-                        </label>
-                        <label for="chromium">
-                            <input type="checkbox" id="chromium">Хром
-                        </label>
-                        <label for="nickel">
-                            <input type="checkbox" id="nickel">Никель матовый
-                        </label>
-                        <label for="chrome-matt">
-                            <input type="checkbox" id="chrome-matt">Хром матовый
-                        </label>
-                        <label for="gold">
-                            <input type="checkbox" id="gold">Золото
-                        </label>
-                        <label for="light-gold">
-                            <input type="checkbox" id="light-gold">Светлое золото
-                        </label>
-                        <label for="bronze">
-                            <input type="checkbox" id="bronze">Бронза
-                        </label>
-                        <label for="dark-matt">
-                            <input type="checkbox" id="dark-matt">Черный матовый
-                        </label>
-                        <label for="base">
-                            <input type="checkbox" id="base">Базовый цвет
-                        </label>
+                <div class="col-50">
+                    <h1 class="product__heading">Радиатор горизонтальный Loten “Grey Z”</h1>
+                    <div class="product__hint">Ширина:</div>
+                    <div class="product__row">
+                        <div class="product__feature active" data-active>18 см, 4 секции</div>
+                        <div class="product__feature" data-active>28 см, 6 с.</div>
+                        <div class="product__feature" data-active>38 см, 8 с.</div>
+                        <div class="product__feature" data-active>48 см, 10 с.</div>
+                        <div class="product__feature" data-active>58 см, 12 с.</div>
                     </div>
+                    <div class="product__hint">Высота:</div>
+                    <div class="product__row">
+                        <div class="product__feature active" data-active>75 см</div>
+                        <div class="product__feature" data-active>100 см</div>
+                        <div class="product__feature" data-active>125 см</div>
+                        <div class="product__feature" data-active>150 см</div>
+                        <div class="product__feature" data-active>175 см</div>
+                        <div class="product__feature" data-active>200 см</div>
+                    </div>
+                    <div class="product__hint">Мощность: <span>0.366 кВт</span></div>
+                    <div class="product__hint">Цвет:</div>
+                    <div class="product__row">
+                        <div class="color__item">
+                            <div class="color__example"></div>
+                            <div class="color__description">
+                                <div class="color__title">Белый</div>
+                                <div class="color__subtitle">RAL 9016</div>
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__example" id="gray"></div>
+                            <div class="color__description">
+                                <div class="color__title">Серый</div>
+                                <div class="color__subtitle">RAL 9016</div>
+                            </div>
+                        </div>
+                        <div class="color__item">
+                            <div class="color__example" id="light-gold"></div>
+                            <div class="color__description">
+                                <div class="color__title">Светлое золото</div>
+                                <div class="color__subtitle">RAL 9016</div>
+                            </div>
+                        </div>
+                        <div class="color__item palette">
+                            <div class="color__example"></div>
+                            <div class="color__description">
+                                <div class="color__title alt">Любой другой цвет</div>
+                            </div>
+                            <div class="color__hint">Если вам не подходят базовые цвета (серый, белый, бежевый, черный), мы можем покрасить в любой другой цвет за 10% стоимости радиатора</div>
+                        </div>
+                    </div>
+                    <div class="product__hint">Подключение:</div>
+                    <div class="product__row">
+                        <div class="product__feature active" data-active>Нижнее</div>
+                        <div class="product__feature" data-active>Боковое</div>
+                    </div>
+                    <div class="product__price">577,00 р.</div>
+                    <div class="product__order" data-control="modal--request">Заказать консультацию</div>
                 </div>
             </div>
-            <div class="row flex-wrap">
-                <div class="col-50">
-                    <a href="" class="product__item small" data-bg="public/img/cat__1.jpg">
-                        <div class="product__title">Радиатор Loten “Grey Z”</div>
-                    </a>
-                </div>
-                <div class="col-50">
-                    <a href="" class="product__item small" data-bg="public/img/cat__1.jpg">
-                        <div class="product__title">Радиатор Loten “Line Z”</div>
-                    </a>
-                </div>
-                <div class="col-50">
-                    <a href="" class="product__item small" data-bg="public/img/cat__1.jpg">
-                        <div class="product__title">Радиатор Loten “Grey Z”</div>
-                    </a>
-                </div>
-                <div class="col-50">
-                    <a href="" class="product__item small" data-bg="public/img/cat__1.jpg">
-                        <div class="product__title">Радиатор Loten “Line Z”</div>
-                    </a>
-                </div>
+            <div class="tab__nav">
+                <div class="tab__item active">Описание</div>
+                <div class="tab__item">Инструкции по монтажу</div>
+                <div class="tab__item">Скачать документы</div>
+                <div class="tab__item">Фото реализованных объектов</div>
+            </div>
+            <div class="tab__content active">
+                <ul>
+                    <li>Для систем горячего водоснабжения и отопления.</li>
+                    <li>Рабочее давление до 8 атм, испытательное давление 12 атм.</li>
+                    <li>Боковое подключение – присоединительный размер G1/2.</li>
+                    <li>Нижнее подключение – присоединительный размер G1/2.</li>
+                    <li>Порошковая покраска.</li>
+                </ul>
+            </div>
+            <div class="tab__content">
+                <ul>
+                    <li>Боковое подключение – присоединительный размер G1/2.</li>
+                    <li>Нижнее подключение – присоединительный размер G1/2.</li>
+                    <li>Порошковая покраска.</li>
+                </ul>
+            </div>
+            <div class="tab__content">
+                Test
+            </div>
+            <div class="tab__content">
+                Test 2
             </div>
         </div>
     </section>
+
+    <div class="modal modal--request">
+        <div class="modal__container">
+            <form class="form form--order">
+                <div class="modal__title">Заказать консультацию</div>
+                <div class="row">
+                    <div class="col-50">
+                        <label>Ваше имя</label>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="col-50">
+                        <label>Телефон*</label>
+                        <input type="text" name="phone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-grow">
+                        <label>Комментарий</label>
+                        <input type="text" name="message">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-grow">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
+            </form>
+            <div class="modal__close"></div>
+        </div>
+    </div>
 
     <footer class="header">
         <div class="container">
@@ -205,6 +262,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="public/js/slick.js"></script>
     <script src="public/js/multirange.js"></script>
     <script src="public/js/main.js"></script>
     

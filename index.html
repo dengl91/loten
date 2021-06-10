@@ -180,6 +180,36 @@
         </div>
     </section>
 
+    <div class="modal modal--request">
+        <div class="modal__container">
+            <form class="form form--order">
+                <div class="modal__title">Заказать консультацию</div>
+                <div class="row">
+                    <div class="col-50">
+                        <label>Ваше имя</label>
+                        <input type="text" name="username">
+                    </div>
+                    <div class="col-50">
+                        <label>Телефон*</label>
+                        <input type="text" name="phone" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-grow">
+                        <label>Комментарий</label>
+                        <input type="text" name="message">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-grow">
+                        <input type="submit" value="Отправить">
+                    </div>
+                </div>
+            </form>
+            <div class="modal__close"></div>
+        </div>
+    </div>
+
     <footer class="header">
         <div class="container">
             <img src="public/img/logo.svg" class="header__logo" alt="Loten">
