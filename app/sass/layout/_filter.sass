@@ -1,0 +1,89 @@
+// 
+// Theme Name: New Clean Template
+// _filter.sass
+//
+// app/sass/layout/
+//
+
+.filter
+    $c: &
+    &__content
+        display: flex
+        margin: 0 0 40px 0
+    &__item
+        margin: 0 10px 0 0
+        position: relative
+    &__title
+        line-height: 24px
+        background: url(../img/icons/dropdown.svg) no-repeat top 50% right 10%
+        border: 1px solid var(--stroke)
+        border-radius: 4px
+        padding: 0 32px 0 10px
+        cursor: pointer
+    &__items
+        min-width: 210px
+        background: #fff
+        border-radius: 4px
+        box-shadow: 0 0 10px #0000001a
+        flex-direction: column
+        padding: 15px
+        display: none
+        position: absolute
+        top: 32px
+        left: -20px
+        z-index: 1
+        &.active
+            display: flex
+        label
+            line-height: 32px
+            white-space: nowrap
+            display: flex
+            align-items: center
+            cursor: pointer
+        input
+            &[type=checkbox]
+                width: 16px
+                height: 16px
+                border: 1px solid var(--text)
+                border-radius: 4px
+                padding: 0
+                margin: 0 10px 0 0
+                -webkit-appearance: none
+                &:checked
+                    background: url(../img/icons/check.svg) no-repeat 60% 50% var(--main) !important
+            &.filter-range
+                width: 180px
+        &.colors
+            input
+                width: 20px
+                height: 20px
+                border-radius: 50%
+                &:checked
+                    background: url(../img/icons/check.svg) no-repeat 50% 50% var(--main) !important
+    &__range
+        display: flex
+        justify-content: space-between
+        margin: 0 0 10px 0
+        input
+            width: 42px
+    &__wrapper
+        position: relative
+
+#gray
+    background: #E2E2E2
+#chromium
+    background: #E0DFE5
+#nickel
+    background: #C9B8BE
+#chrome-matt
+    background: #C7C6CB
+#gold
+    background: #ECC584
+#light-gold
+    background: #F4DAAD
+#bronze
+    background: #E0BFAA
+#dark-matt
+    background: #2C2D32
+#base
+    background: #CDC6BE

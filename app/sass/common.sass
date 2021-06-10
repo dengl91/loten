@@ -230,6 +230,13 @@ section
         &:last-child
             margin: 0
 
+.content
+    margin: 40px 0 100px 0
+            
+h1
+    font-size: 24px
+    margin: 0 0 40px 0
+
 .show
     $c: &
     &__item
@@ -240,7 +247,7 @@ section
         flex-direction: column
         align-items: flex-start
         justify-content: flex-end
-        padding: 20px 40px
+        padding: 30px 40px
         cursor: pointer
         transition: 0.3s
         &:hover
@@ -252,6 +259,10 @@ section
             height: 580px
         &.alt
             border: 1px solid var(--stroke)
+        .content &
+            height: 440px
+            &:nth-of-type(1)
+                margin: 0 0 40px 0
     &__title
         font-size: 32px
         color: #fff
@@ -270,6 +281,28 @@ section
             color: var(--text)
             &::after
                 background: url(../img/icons/arrow__right.svg) no-repeat 50%
+
+.product
+    &__item
+        width: 100%
+        height: 700px
+        background-position: 50%
+        background-size: cover
+        display: block
+        margin: 0 0 80px 0
+        position: relative
+        &.small
+            height: 470px
+            border: 1px solid var(--stroke)
+    &__title
+        font-size: 18px
+        line-height: 52px
+        position: absolute
+        top: 100%
+        left: 0
+
+.bc
+    color: var(--text__light)
 
 .flowquote
     position: absolute
@@ -336,6 +369,17 @@ section
         .active &
             transform: translateY(-6px) rotate(-45deg)
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+    -webkit-appearance: none
+    margin: 0
+
+/* Firefox */
+input[type=number]
+    -moz-appearance: textfield
+
+
 .menu-btn
     display: none
 
@@ -389,6 +433,7 @@ section
         margin: 20px 0 0 0
 
     .show
+        $c: &
         &__item
             height: 480px
             padding: 0
@@ -396,6 +441,10 @@ section
             &.small
                 height: 480px
                 margin: 0 0 20px 0
+            .content &
+                height: 440px
+                &:nth-of-type(1)
+                    margin: 0 0 80px 0
         &__title
             font-size: 24px
             color: var(--text)
@@ -462,3 +511,4 @@ section
 
 @import layout/topbar
 @import layout/banner
+@import layout/filter

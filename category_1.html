@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loten</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="public/css/multirange.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <img src="public/img/logo.svg" class="header__logo" alt="Loten">
+            <div class="menu-btn" data-toggle data-control="megamenu">
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+                <div class="menu-btn__item"></div>
+            </div>
+            <nav class="header__nav">
+                <a href="" data-nav>Каталог</a>
+                <a href="" data-nav>Компания</a>
+                <a href="" data-nav>Контакты</a>
+            </nav>
+            <div class="header__phone">
+                <a href="tel:+375296400334">+375 29 640-03-34</a>
+                <div class="btn" data-control="modal--request">Заказать звонок</div>
+            </div>
+            <div class="social">
+                <div class="social__content">
+                    <a href="" class="social__item viber"></a>
+                    <a href="" class="social__item telegram"></a>
+                    <a href="" class="social__item whatsapp"></a>
+                    <a href="" class="social__item instagram"></a>
+                </div>
+                <div class="workhours">С 9:00 до 18:00</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="megamenu">
+        <span class="megamenu__mobile active">Каталог</span>
+        <span class="megamenu__mobile">Компания</span>
+        <span class="megamenu__mobile">Контакты</span>
+        <div class="megamenu__content active">
+            <div class="megamenu__col">
+                <a href="">Горизонтальные радиаторы</a>
+                <a href="">Вертикальные радиаторы</a>
+                <a href="">Напольные радиаторы</a>
+            </div>
+            <div class="megamenu__col">
+                <a href="">Горизонтальные радиаторы</a>
+                <a href="">Вертикальные радиаторы</a>
+                <a href="">Напольные радиаторы</a>
+            </div>
+        </div>
+        <div class="megamenu__content">
+            <div class="megamenu__col">
+                <a href="">О компании</a>
+                <a href="">Наша комнда</a>
+            </div>
+            <div class="megamenu__col">
+                <a href="">Вертикальные радиаторы</a>
+                <a href="">Напольные радиаторы</a>
+            </div>
+        </div>
+        <div class="megamenu__content">
+            <div class="megamenu__col">
+                <a href="">Горизонтальные радиаторы</a>
+                <a href="">Вертикальные радиаторы</a>
+                <a href="">Напольные радиаторы</a>
+            </div>
+            <div class="megamenu__col">
+                <a href="">Горизонтальные радиаторы</a>
+                <a href="">Вертикальные радиаторы</a>
+                <a href="">Напольные радиаторы</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bc">
+        <div class="container">
+            <a href="/" class="bc__item">Главная</a>
+            &nbsp;/&nbsp;
+            <a href="/catalog/" class="bc__item">Каталог</a>
+            &nbsp;/&nbsp;
+            Радиаторы
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container">
+            <h1>Дизайнерские радиаторы</h1>
+            <div class="filter__content">
+                <div class="filter__item">
+                    <div class="filter__title">Водяной или эл.</div>
+                    <div class="filter__items">
+                        <label for="electro">
+                            <input type="checkbox" id="electro">Электрический
+                        </label>
+                        <label for="water">
+                            <input type="checkbox" id="water">Водяной
+                        </label>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter__title">Расположение</div>
+                    <div class="filter__items">
+                        <label for="horizontal">
+                            <input type="checkbox" id="horizontal" data-modify data-height="180-680" data-width="750-2000" data-step="10">Горизонтальный
+                        </label>
+                        <label for="vertical">
+                            <input type="checkbox" id="vertical" data-modify data-height="750-2000" data-width="180-680" data-step="10">Вертикальный
+                        </label>
+                        <label for="floor">
+                            <input type="checkbox" id="floor" data-modify data-height="750-2000" data-width="180-680" data-step="10">Напольный
+                        </label>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter__title">Тип подключения</div>
+                    <div class="filter__items">
+                        <label for="side">
+                            <input type="checkbox" id="side">Боковое
+                        </label>
+                        <label for="bottom">
+                            <input type="checkbox" id="bottom">Нижнее
+                        </label>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter__title">Высота</div>
+                    <div class="filter__items">
+                        <div class="filter__range">
+                            <span>от <input type="number" class="low-value" placeholder="180"> мм</span>
+                            <span>до <input type="number" class="high-value" placeholder="2000"> мм</span>
+                        </div>
+                        <div class="filter__wrapper" data-for="height">
+                            <input type="range" name="height" class="filter-range" multiple value="180,2000" min="180" max="2000" step="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter__title">Ширина</div>
+                    <div class="filter__items">
+                        <div class="filter__range">
+                            <span>от <input type="number" class="low-value" placeholder="180"> мм</span>
+                            <span>до <input type="number" class="high-value" placeholder="2000"> мм</span>
+                        </div>
+                        <div class="filter__wrapper">
+                            <input type="range" name="width" class="filter-range" multiple value="180,2000" min="180" max="2000" step="10">
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter__title">Мощность</div>
+                    <div class="filter__items">
+                        <div class="filter__range">
+                            <span>от <input type="number" class="low-value" placeholder="200"> Вт</span>
+                            <span>до <input type="number" class="high-value" placeholder="5000"> Вт</span>
+                        </div>
+                        <div class="filter__wrapper">
+                            <input type="range" name="width" class="filter-range" multiple value="200,5000" min="200" max="5000" step="100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row flex-wrap">
+                <div class="col-50">
+                    <a href="" class="product__item" data-bg="public/img/prod__1.jpg">
+                        <div class="product__title">Радиатор Loten “Grey Z”</div>
+                    </a>
+                </div>
+                <div class="col-50">
+                    <a href="" class="product__item" data-bg="public/img/prod__2.jpg">
+                        <div class="product__title">Радиатор Loten “Line Z”</div>
+                    </a>
+                </div>
+                <div class="col-50">
+                    <a href="" class="product__item" data-bg="public/img/prod__1.jpg">
+                        <div class="product__title">Радиатор Loten “Grey Z”</div>
+                    </a>
+                </div>
+                <div class="col-50">
+                    <a href="" class="product__item" data-bg="public/img/prod__2.jpg">
+                        <div class="product__title">Радиатор Loten “Line Z”</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="header">
+        <div class="container">
+            <img src="public/img/logo.svg" class="header__logo" alt="Loten">
+            <nav class="header__nav">
+                <a href="">Каталог</a>
+                <a href="">Компания</a>
+                <a href="">Контакты</a>
+            </nav>
+            <div class="header__phone">
+                <a href="tel:+375296400334">+375 29 640-03-34</a>
+                <div class="btn" data-control="modal--request">Заказать звонок</div>
+            </div>
+            <div class="social">
+                <div class="social__content">
+                    <a href="" class="social__item viber"></a>
+                    <a href="" class="social__item telegram"></a>
+                    <a href="" class="social__item whatsapp"></a>
+                    <a href="" class="social__item instagram"></a>
+                </div>
+                <div class="workhours">С 9:00 до 18:00</div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="copyright">
+        <div class="container">
+            Loten.by — эксклюзивный представитель радиаторов Loten в Беларуси. 2021
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="public/js/multirange.js"></script>
+    <script src="public/js/main.js"></script>
+    
+</body>
+</html>

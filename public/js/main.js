@@ -46,13 +46,6 @@
                     target.addClass('counted');
                 }
             });
-            $('[data-width]').each(function () {
-                let target = $(this);
-                if ( isOnScreen(target) && !target.hasClass('counted') ) {
-                    setWidth(target);
-                    target.addClass('counted');
-                }
-            });
             $('[data-src]').each(function () {
                 let target = $(this);
                 if ( isOnScreen(target) && !target.hasClass('counted') ) {
@@ -61,6 +54,40 @@
                     target.addClass('counted');
                 }
             });
+        });
+
+        // custom select
+
+        $('.filter__title').on('click', function() {
+            $('.filter__items').not($(this).next()).removeClass('active');
+            $(this).next('.filter__items').toggleClass('active');
+        });
+
+        $('body').mousedown( function(e) {
+            if ( $(e.target).closest('.filter__item').length ) return;
+            $('.filter__items').removeClass('active');
+        });
+
+        $('.filter__wrapper').on('input', '.filter-range', function() {
+            var range = $(this).closest('.filter__item').find('.filter-range').val().split(',');
+            $(this).closest('.filter__item').find('.low-value').val(range[0]);
+            $(this).closest('.filter__item').find('.high-value').val(range[1]);
+        });
+
+        $('[data-modify]').change(function() {
+            if ( $('[data-modify]:checked').length == 1 ) {
+                let height     = $(this).data('height').split('-');
+                let step       = $(this).data('step');
+                $('input[name=height]').remove();
+                $('[data-for=height]').append('<input type="range" name="height" class="filter-range" multiple value="' + height[0] + ',' + height[1] + '" min="' + height[0] + '" max="' + height[1] + '" step="' + step + '">');
+                multirange(document.querySelector('input[name=height]'));
+                $('.filter__wrapper').find('.filter-range').trigger('input');
+            } else {
+                $('input[name=height]').remove();
+                $('[data-for=height]').append('<input type="range" name="height" class="filter-range" multiple value="180,2000" min="180" max="2000" step="10">');
+                multirange(document.querySelector('input[name=height]'));
+                $('.filter__wrapper').find('.filter-range').trigger('input');
+            }
         });
 
         function countUp(target) {
