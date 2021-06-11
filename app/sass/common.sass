@@ -139,6 +139,12 @@ section
 .bg--violet
     background: var(--violet__light)
 
+[class*=__img]
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+
 .header
     height: 120px
     padding: 20px 0 0 0
@@ -301,6 +307,7 @@ h1
         top: 100%
         left: 0
     &__gallery
+        border: 1px solid var(--stroke)
         overflow: hidden
     &__row
         display: flex
@@ -335,6 +342,11 @@ h1
         span
             color: var(--text)
             font-weight: 600
+    &__example
+        border-bottom: 1px dotted var(--text)
+        display: inline-block
+        margin: 0 0 20px 0
+        cursor: pointer
 
 .color
     $c: &
@@ -378,6 +390,22 @@ h1
         position: absolute
         left: 0
         bottom: 32px
+
+.example
+    &__content
+        display: flex
+    &__item
+        text-align: center
+        margin: 0 30px 0 0
+    &__img
+        width: 110px
+        height: 110px
+        margin: 0 0 20px 0
+        img
+            border-radius: 50%
+    &__subtitle
+        color: var(--gray)
+        font-style: italic
 
 .tab
     &__nav
@@ -427,6 +455,7 @@ h1
         left: 0
 
 .modal
+    $c: &
     width: 100vw
     height: 100vh
     background: #00000033
@@ -490,6 +519,10 @@ h1
             padding: 0 60px
             margin: 0
             cursor: pointer
+    &--example
+        #{$c}__container
+            max-width: var(--container)
+            display: flex
 
 @keyframes fadeIn
     0%
@@ -628,6 +661,7 @@ h1
             width: 10px
             height: 10px
             background: #fff
+            border: 1px solid var(--text)
             border-radius: 50%
             padding: 0
             margin: 0 4px
@@ -635,6 +669,7 @@ h1
                 width: 14px
                 height: 14px
                 background: var(--main)
+                border: none
         button
             font-size: 0
             border: 0
@@ -759,6 +794,7 @@ input[type=number]
             margin: 0 0 40px 0
 
     .modal
+        $c: &
         &__container
             height: 100vh
             margin: 30px 15px 0 15px
@@ -767,6 +803,18 @@ input[type=number]
             text-align: left
         input
             margin: 0
+        &--example
+            #{$c}__container
+                height: auto
+                border-radius: 8px 0 0 8px
+                padding-right: 0
+                margin: 0 0 0 15px
+                overflow: auto
+
+    .example
+        &__content
+            width: 100%
+            overflow: auto
 
     .copyright
         padding: 20px 0 30px 0
@@ -820,7 +868,8 @@ input[type=number]
     .tab
         &__nav
             white-space: nowrap
-            overflow: auto
+            overflow-y: hidden
+            overflow-x: auto
 
     footer
         .header
